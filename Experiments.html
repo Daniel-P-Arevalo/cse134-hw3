@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <title>Experiments</title>
+    <style>
+      my-tag {
+      	border: solid black;
+      	border-width: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Experiments</h1>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/Portfolio.html">Portfolio</a>
+        <a href="/About.html">About Me</a>
+        <a href="/Experiments.html">Experiments</a>
+      </nav>
+      <hr>
+    </header>
+
+    <main>
+      <h2>Experiment 1 - Text</h2>
+      <p>
+        This is some example text
+      </p>
+      <aside>
+        <p>This is an example of an aside</p>
+      </aside>
+
+      <code>Print("Hello World")</code>
+
+      <pre>This    is an    example of   the 
+                   pre          tag</pre>
+
+      <blockquote>
+        "You never really understand a person until you consider from his point of view, until you climb into his skin and walk in it."
+      </blockquote>
+      <p>-Harper Lee <cite>To Kill A Mockingbird</cite></p>
+
+      <del>
+        <p>There has been 10 days without any incidents.</p>
+      </del>
+      <ins>
+        <p>The office systems went down for the whole day requiring maintenance.</p>
+      </ins>
+
+      <hgroup>
+        <h3>Back to the Future</h3>
+        <p>Released: July 3, 1985</p>
+      </hgroup>
+
+      <dl>
+        <dt>HTML</dt>
+        <dd>A markup language used in creating the base document of websites.</dd>
+
+        <dt>CSS</dt>
+        <dd>A language for creating style sheets that enhances the presentation of the website.</dd>
+
+        <dt>Javascript</dt>
+        <dd>A programming language used in adding additional functionality to websites.</dd>
+      </dl>
+
+      <p>A <dfn>compiler</dfn> is a computer program that changes source code into machine code, which can be executed by the computer.</p>
+
+      <p>Press <kbd>Alt</kbd> + <kbd>f4</kbd> to enter a secret page.</p>
+      
+      <hr>
+
+      <h2>Experiment 2 - Media</h2>
+      <picture>
+        <source srcset="/assets/profile.jpeg" width="200" height="300">
+        <img src="/assets/dogs.jpg" alt="Dogs" width="600" height="500">
+      </picture>
+  
+      <iframe 
+        width="500"
+        height="400" 
+        src="https://ucsd.edu/">
+      </iframe>
+  
+      <audio controls src="/assets/meow.mp3"></audio>
+  
+      <video controls="" src="/assets/sunset.mp4" height="200" width="200"></video>   
+
+      <figure>
+        <img src="/assets/dogs.jpg" alt="Dogs" width="600" height="500">
+        <figcaption>Dogs in a Field</figcaption>
+      </figure>
+      <hr>
+  
+      <h2>Experiment 3 - Graphics</h2>
+      <canvas width="120" height="100"></canvas>
+      <script>
+        const canvas = document.querySelector("canvas");
+        const context = canvas.getContext("2d");
+        context.fillStyle = "blue";
+        context.fillRect(0, 0, 40, 100);
+        context.fillStyle = "white";
+        context.fillRect(40, 0, 40, 100);
+        context.fillStyle = "red";
+        context.fillRect(80, 0, 40, 100);
+      </script>
+
+      <p> This is the
+        <svg width="200" height="120">
+          <rect x="0" y="0" width="200" height="40" fill="black"/>
+          <rect x="0" y="40" width="200" height="40" fill="red"/>
+          <rect x="0" y="80" width="200" height="40" fill="yellow"/>
+        </svg>
+      German flag</p>
+      <hr>
+
+      <h2>Experiment 4 - Menus and Forms</h2>
+      <label>Choose a Course:</label>
+      <select>
+        <optgroup label="CSE">
+          <option>CSE 134B</option>
+          <option>CSE 160</option>
+          <option>CSE 167</option>
+        </optgroup>
+        <optgroup label="MATH">
+          <option>MATH 18</option>
+          <option>MATH 20A</option>
+          <option>MATH 183</option>
+        </optgroup>
+      </select>
+
+      <form>
+        <label>Username:</label>
+        <input type="text">
+        <label>Password:</label>
+        <input type="text">
+        <input type="submit">
+      </form>
+
+      <form>
+        <fieldset>
+          <legend>Favorite CSE Classes</legend>
+          <label>CSE 150A</label>
+  	      <input type="checkbox">
+          <br>
+    
+          <label>CSE 127</label>
+  	      <input type="checkbox">
+          <br>
+    
+          <label>CSE 152A</label>
+  	      <input type="checkbox">
+          <br>
+    
+          <label>CSE 134B</label>
+  	      <input type="checkbox">
+        </fieldset>
+      </form>
+
+      <label>Please provide feedback here:</label><br>
+      <textarea>Provide Feedback</textarea><br>
+
+      <label>Choose your favorite pet:</label>
+      <input list="pets">
+      <datalist id="pets">
+        <option>Cat</option>
+        <option>Dog</option>
+        <option>Rabbit</option>
+        <option>Fish</option>
+        <option>Hamster</option>
+      </datalist>
+
+      <details>
+        <summary>Why are cats the best pets?</summary>
+        Cats are the best because they're soft, fluffy, self-sufficient, and rewarding to care for.
+      </details>
+
+      <search>
+        <label>Search for your favorite video game:</label>
+        <input type="search">
+        <button type="submit">Search</button>
+      </search>
+
+      <dialog open>
+        <p>I hope you're having a great day!</p>
+        <form method="dialog">
+          <button>Dismiss</button>
+        </form>
+      </dialog>
+
+      <hr>
+
+      <h2>Experiment 5 - Templates</h2>
+      <template>
+        <optgroup label="Spring Courses">
+          <label></label>
+          <input type="checkbox">
+
+          <label></label>
+          <input type="checkbox">
+
+          <label></label>
+          <input type="checkbox">
+
+          <label></label>
+          <input type="checkbox">
+        </optgroup>
+      </template>
+      <hr>
+
+      <h2>Experiment 6 - Tables</h2>
+      <table>
+        <caption>Favorite colors of Students</caption>
+        <colgroup>
+          <col span="2" class="id">
+          <col span="3" class="colors">
+        </colgroup>
+        <tr>
+          <th>UID</th>
+          <th>Name</th>
+          <th>1st Favorite</th>
+          <th>2nd Favorite</th>
+          <th>3rd Favorite</th>
+        </tr>
+         <tr>
+          <td>A17069225</td>
+          <td>Daniel Arevalo</td>
+          <td>Green</td>
+          <td>Purple</td>
+          <td>Red</td>
+        </tr>
+      </table>
+      <hr>
+
+      <h2>Experiment 7 - Custom Tags</h2>
+      <script>
+        class HelloWorld extends HTMLElement {
+          constructor() {
+            super();
+            console.log("Hello World!");
+          }
+        }
+
+        customElements.define("hello-world", HelloWorld);
+      </script>
+  
+      <hello-world></hello-world>
+      
+      <my-tag>This is my custom tag in action!</my-tag>
+        
+    </main>
+
+    <footer>
+      <hr>
+      <h3>Additional Links</h3>
+      <nav>
+        <a href="https://linkedin.com/in/daniel-arevalo-55a005337">LinkedIn</a>
+        <a href="https://github.com/Daniel-P-Arevalo">Github</a>
+      </nav>
+    </footer>
+  </body>
+</html>
