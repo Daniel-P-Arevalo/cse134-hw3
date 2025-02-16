@@ -40,9 +40,6 @@ a.header-link {
 a.footer-link {
     margin: 0.5em;
 }
-a[href="/Experiments.html"] {
-    display: none;
-}
 a#selected{
     color:white;
     background-color: navy;
