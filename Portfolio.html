@@ -2,27 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/base.css"> 
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <style>
+      h2 {
+        text-decoration: underline;
+        margin-bottom: 0em;
+      }
+      p {
+        width: 50%;
+        margin-top: 0em;
+      }
+      p.project-date {
+        font-style: italic;
+      }
+      button {
+        font-size: 1em;
+        background-color: white;
+        border-color: navy;
+        font-family: 'Courier New', Tahoma, 'Lucida Grande', Times;
+      }
+      a.project-link {
+        text-decoration: underline;
+      }
+    </style>
     <title>Portfolio</title>
   </head>
 
   <body>
     <header>
-      <h1>Portfolio</h1>
+      <h1 style="margin-right: auto">Portfolio</h1>
       <nav>
-        <a href="/index.html">Home</a>
-        <a href="/Portfolio.html">Portfolio</a>
-        <a href="/About.html">About Me</a>
-        <a href="/Experiments.html">Experiments</a>
+        <a href="/index.html" class="header-link">Home</a>
+        <a href="/Portfolio.html" id="selected" class="header-link">Portfolio</a>
+        <a href="/About.html" class="header-link">About Me</a>
+        <a href="/Experiments.html" class="header-link">Experiments</a>
       </nav>
-      <hr>
     </header>
+    <hr>
 
     <main>
       <section>
-        <h2>Project 1 - Song Genre Predictions</h2>
-        September, 2024 - December, 2024<br>
-        <a href="https://github.com/brandoluu/CSE_151A_Project">Project Repository</a>
+        <hgroup>
+          <h2>Project 1 - Song Genre Predictions</h2>
+          <p class="project-date">September, 2024 - December, 2024</p>
+        </hgroup>
+        <a href="https://github.com/brandoluu/CSE_151A_Project" class="project-link">Project Repository</a><br><br>
         <p>
           In this project me and my team used various utilized various machine learning methods such <abbr>SVMs</abbr> 
           (<i>Support Vector Machines</i>), <abbr>KNN</abbr> (<i>K-Nearest Neighbors</i>), and <i>Decision Trees</i> to create a 
@@ -35,12 +61,12 @@
       <script src="sliderPlaceholder.js"></script>
     </main>
 
+    <hr>
     <footer>
-      <hr>
       <h3>Additional Links</h3>
       <nav>
-        <a href="https://linkedin.com/in/daniel-arevalo-55a005337">LinkedIn</a>
-        <a href="https://github.com/Daniel-P-Arevalo">Github</a>
+        <a href="https://linkedin.com/in/daniel-arevalo-55a005337" class="footer-link">LinkedIn</a>
+        <a href="https://github.com/Daniel-P-Arevalo" class="footer-link">Github</a>
       </nav>
     </footer>
   </body>

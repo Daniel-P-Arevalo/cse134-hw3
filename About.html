@@ -2,78 +2,100 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/base.css"> 
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <style>
       img {
-  	border : solid black
-  	}
+  	    border : solid navy;
+        border-width: 0.2em;
+  	  }
+      section#bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 25%;
+      }
+      section#skills {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
     </style>
     <title>About Me</title>
   </head>
 
   <body>
     <header>
-      <h1>About Me</h1>
+      <h1 style="margin-right: auto">About Me</h1>
       <nav>
-        <a href="/index.html">Home</a>
-        <a href="/Portfolio.html">Portfolio</a>
-        <a href="/About.html">About Me</a>
-        <a href="/Experiments.html">Experiments</a>
+        <a href="/index.html" class="header-link">Home</a>
+        <a href="/Portfolio.html" class="header-link">Portfolio</a>
+        <a href="/About.html" id="selected" class="header-link">About Me</a>
+        <a href="/Experiments.html" class="header-link">Experiments</a>
       </nav>
-      <hr>
     </header>
+    <hr>
 
     <main>
-      
-      <h2>Daniel Arevalo</h2>
-      <img src="/assets/profile.jpeg" alt="Face Profile" width="325" height="400">
+      <section id="bio">
+        <h2>Daniel Arevalo</h2>
+        <img src="/assets/profile.jpeg" alt="Face Profile" width="325" height="400">
   
-      <address>
-        dparevalo@ucsd.edu<br>
-        +1 (619) 569-0837
-      </address>
-    
-      <p>
-        I'm Daniel Arevalo a senior computer science student studying at the University of California, San Diego. 
-        I have a great interest in learning new things about the field of computer science and 
-        I'm always look for more opportunities to gain experience in the field.
-      </p>
+        <h3>Contact Info:</h3>
+        <address>
+          Email: dparevalo@ucsd.edu<br>
+          Phone: +1 (619) 569-0837
+        </address>
+      
+        <p style="width: 50%;">
+          I'm Daniel Arevalo a senior computer science student studying at the University of California, San Diego. 
+          I have a great interest in learning new things about the field of computer science and 
+          I'm always look for more opportunities to gain experience in the field.
+        </p>
+      </section>
       <hr>
   
       <h2>Skills</h2>
-  	    <b>Technical Skills</b>
-        <ul>
-          <li>Python</li>
-          <li>Java</li>
-          <li>PostgresSQL</li>
-          <li>Unix</li>
-        </ul>
-  
-  	    <b>Personal Strengths</b>
-        <ol>
-          <li>Fast learner</li>
-          <li>Works well under pressure</li>
-          <li>Eagerness to learn</li>
-        </ol>
+      <section id="skills">
+        <section>
+  	      <b>Technical Skills</b>
+          <ul>
+            <li>Python</li>
+            <li>Java</li>
+            <li>PostgresSQL</li>
+            <li>Unix</li>
+          </ul>
+        </section>
+        
+        <section>
+  	      <b>Personal Strengths</b>
+          <ol>
+            <li>Fast learner</li>
+            <li>Works well under pressure</li>
+            <li>Eagerness to learn</li>
+          </ol>
+        </section>
+      </section>
       <hr>
   
       <h2>Education</h2>
-      <span>University of California, San Diego</span><br>
-      September 2021 - Present<br>
+      <span style="font-weight: bold;">University of California, San Diego</span><br>
+      <i>September 2021 - Present</i><br>
       B.S. Computer Science<br>
   
-      <p>
+      <p style="width: 50%;">
         I'm a senior currently studying for a bachelor's degree in computer science at the 
         University of California, San Diego. I'm currently planning to graduate in June of 2025.
       </p>
     </main>
 
+    <hr>
     <footer>
-      <hr>
       <h3>Additional Links</h3>
       <nav>
-        <a href="https://linkedin.com/in/daniel-arevalo-55a005337">LinkedIn</a>
-        <a href="https://github.com/Daniel-P-Arevalo">Github</a>
+        <a href="https://linkedin.com/in/daniel-arevalo-55a005337" class="footer-link">LinkedIn</a>
+        <a href="https://github.com/Daniel-P-Arevalo" class="footer-link">Github</a>
       </nav>
     </footer>
   </body>
