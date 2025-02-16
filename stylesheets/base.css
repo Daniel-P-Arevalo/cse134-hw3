@@ -1,5 +1,7 @@
 :root {
-    --pale-green: rgb(207, 238, 207);
+    --pale-green: rgb(200, 230, 200);
+    --very-dark-blue: color(xyz 0 0 0.2);
+    --very-light-gray: color-mix(in xyz, black 20%, white 80%);
 }
 * {
     font-family: 'Gill Sans', Georgia, 'Lucida Grande', Times;
@@ -36,9 +38,12 @@ a.header-link {
     margin: 0.5rem;
     background-color: white;
     font-family: Copperplate, "Arial Black", Tahoma, Courier;
+    transition: background-color 100ms;
+    transition: color 100ms;
 }
 a.footer-link {
-    margin: 0.5em;
+    color: var(--very-dark-blue, darkblue);
+    margin: 0.5rem;
 }
 a#selected{
     color:white;
@@ -46,3 +51,20 @@ a#selected{
     text-decoration: underline;
     border: solid
 }
+a.header-link:hover {
+    background-color: navy;
+    color: white;
+}
+@keyframes pop-in {
+    from {
+      transform: scale(0%);
+    }
+  
+    to {
+      transform: scale(100%);
+    }
+  }
+  img {
+    animation-duration: 1s;
+    animation-name: pop-in;
+  }
