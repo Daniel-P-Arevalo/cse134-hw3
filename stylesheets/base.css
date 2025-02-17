@@ -15,17 +15,24 @@ header {
 footer {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.5rem;
 }
 body {
     background-color: var(--pale-green, honeydew);
 }
+h1 {
+    margin-left: 1rem;
+}
 h2 {
     text-decoration: underline;
-    margin-bottom: 0em;
+    margin-left: 1rem;
 }
 h3 {
-    text-decoration: underline;
     margin-bottom: 0em;
+    margin-left: 1rem;
+}
+p {
+    width: 50%;
 }
 a {
     color:navy;
@@ -43,7 +50,7 @@ a.header-link {
 }
 a.footer-link {
     color: var(--very-dark-blue, darkblue);
-    margin: 0.5rem;
+    margin-left: 1.5rem;
 }
 a#selected{
     color:white;
@@ -64,7 +71,28 @@ a.header-link:hover {
       transform: scale(100%);
     }
   }
-  img {
+picture {
     animation-duration: 1s;
     animation-name: pop-in;
-  }
+}
+img {
+    object-position: 50% 50%;
+    object-fit: fill;
+}
+nav {
+    margin-right: 1rem;
+}
+@media (orientation: portrait) {
+    p {
+        width: 75%
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .header-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}

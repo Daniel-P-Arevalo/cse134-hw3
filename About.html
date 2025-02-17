@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <style>
       img {
-  	    border : solid navy;
+  	    border: solid navy;
         border-width: 0.2em;
   	  }
       section#bio {
@@ -19,10 +19,18 @@
       section#skills {
         display: flex;
         justify-content: space-evenly;
+        margin-left: 1em;
       }
       h2:has(+ img) {
         margin-bottom: 0.5em;
         text-decoration: underline;
+      }
+      @media (orientation: portrait) {
+        section#skills {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
       }
     </style>
     <title>About Me</title>
@@ -31,7 +39,7 @@
   <body>
     <header>
       <h1 style="margin-right: auto">About Me</h1>
-      <nav>
+      <nav class="header-nav">
         <a href="/index.html" class="header-link">Home</a>
         <a href="/Portfolio.html" class="header-link">Portfolio</a>
         <a href="/About.html" id="selected" class="header-link">About Me</a>
@@ -42,15 +50,18 @@
     <main>
       <section id="bio">
         <h2>Daniel Arevalo</h2>
-        <img src="/assets/selfie.webp" alt="Daniel Arevalo wearing a black shirt" width="325" height="400">
-  
+        <picture>
+          <source srcset="/assets/selfie.webp" media="(max-width: 320px)" width="225" height="275">
+          <img src="/assets/selfie.webp" alt="Daniel Arevalo wearing a black shirt" width="325" height="400">
+        </picture>
+
         <h3>Contact Info:</h3>
         <address>
           Email: dparevalo@ucsd.edu<br>
           Phone: +1 (619) 569-0837
         </address>
       
-        <p style="width: 50%;">
+        <p>
           I'm Daniel Arevalo a senior computer science student studying at the University of California, San Diego. 
           I have a great interest in learning new things about the field of computer science and 
           I'm always look for more opportunities to gain experience in the field.
@@ -58,10 +69,17 @@
       </section>
       <hr>
   
-      <h2>Skills</h2>
       <section id="skills">
-        <section>
-  	      <b>Technical Skills</b>
+        <h2>Skills</h2>
+        <style>
+          @scope {
+            h3 {
+              text-decoration: none;
+            }
+          }
+        </style>
+        <section style="margin-right: 2dvw;">
+  	      <h3>Technical Skills</h3>
           <ul style="margin-top: 0em;">
             <li>Python</li>
             <li>Java</li>
@@ -70,8 +88,8 @@
           </ul>
         </section>
         
-        <section>
-  	      <b>Personal Strengths</b>
+        <section style="margin-left: 2dvw;">
+  	      <h3>Personal Strengths</h3>
           <ol style="margin-top: 0em;">
             <li>Fast learner</li>
             <li>Works well under pressure</li>
@@ -80,16 +98,18 @@
         </section>
       </section>
       <hr>
-  
+      
       <h2>Education</h2>
-      <span style="font-weight: bold;">University of California, San Diego</span><br>
-      <i>September 2021 - Present</i><br>
-      B.S. Computer Science<br>
+      <section style="margin-left: 1rem;">
+        <span><b>University of California, San Diego</b></span><br>
+        <i>September 2021 - Present</i><br>
+        B.S. Computer Science<br>
   
-      <p style="width: 50%;">
-        I'm a senior currently studying for a bachelor's degree in computer science at the 
-        University of California, San Diego. I'm currently planning to graduate in June of 2025.
-      </p>
+        <p>
+          I'm a senior currently studying for a bachelor's degree in computer science at the 
+          University of California, San Diego. I'm currently planning to graduate in June of 2025.
+        </p>
+      </section>
     </main>
 
     <hr>
