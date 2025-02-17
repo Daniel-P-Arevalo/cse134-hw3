@@ -92,10 +92,13 @@ nav {
         width: 50%
     }
     button {
-        font-size: 1.25em;
+        font-size: 1.2em;
+    }
+    a.footer-link {
+        font-size: 1.2em;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
     p {
         width: 75%
     }
@@ -113,5 +116,8 @@ nav {
     }
     a.header-link {
         margin-bottom: 1dvh;
+    }
+    a.footer-link {
+        font-size: 1.3em;
     }
 }
