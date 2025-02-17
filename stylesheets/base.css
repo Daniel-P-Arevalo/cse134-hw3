@@ -82,7 +82,20 @@ img {
 nav {
     margin-right: 1rem;
 }
-@media (orientation: portrait) {
+@media (max-width: 1024px) {
+    p {
+        width: 50%
+    }
+}
+@media (max-width: 768px) {
+    p {
+        width: 50%
+    }
+    button {
+        font-size: 1.25em;
+    }
+}
+@media (max-width: 320px) {
     p {
         width: 75%
     }
@@ -90,9 +103,15 @@ nav {
         display: flex;
         flex-direction: column;
     }
+    button {
+        font-size: 1.5em;
+    }
     .header-nav {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+    }
+    a.header-link {
+        margin-bottom: 1dvh;
     }
 }

@@ -18,14 +18,14 @@
       }
       section#skills {
         display: flex;
-        justify-content: space-evenly;
-        margin-left: 1em;
+        flex-direction: row;
+        justify-content: flex-start;
       }
-      h2:has(+ img) {
-        margin-bottom: 0.5em;
+      h2:has(+ picture) {
+        margin-bottom: 2dvh;
         text-decoration: underline;
       }
-      @media (orientation: portrait) {
+      @media (max-width: 320px) {
         section#skills {
           display: flex;
           flex-direction: column;
@@ -52,6 +52,8 @@
         <h2>Daniel Arevalo</h2>
         <picture>
           <source srcset="/assets/selfie.webp" media="(max-width: 320px)" width="225" height="275">
+          <source srcset="/assets/selfie.webp" media="(max-width: 768px)" width="300" height="350">
+          <source srcset="/assets/selfie.webp" media="(max-width: 1024px)" width="400" height="450">
           <img src="/assets/selfie.webp" alt="Daniel Arevalo wearing a black shirt" width="325" height="400">
         </picture>
 
@@ -68,16 +70,18 @@
         </p>
       </section>
       <hr>
-  
-      <section id="skills">
-        <h2>Skills</h2>
-        <style>
-          @scope {
-            h3 {
-              text-decoration: none;
-            }
+      
+      <style>
+        @scope {
+          h3 {
+            text-decoration: underline;
           }
-        </style>
+        }
+      </style>
+
+      <h2 style="margin-bottom: 0em;">Skills</h2>
+      <section id="skills">
+        <h2 style="display: none;">Skills</h2>
         <section style="margin-right: 2dvw;">
   	      <h3>Technical Skills</h3>
           <ul style="margin-top: 0em;">
@@ -99,8 +103,8 @@
       </section>
       <hr>
       
-      <h2>Education</h2>
       <section style="margin-left: 1rem;">
+        <h2 style="margin-left: 0rem;">Education</h2>
         <span><b>University of California, San Diego</b></span><br>
         <i>September 2021 - Present</i><br>
         B.S. Computer Science<br>
